@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4is-c6-WdJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OptionsComponent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-FM-0CO" customClass="CustomTextField" customModule="CustomUIDesign">
+                                <rect key="frame" x="0.0" y="153" width="393" height="150"/>
+                                <color key="backgroundColor" red="0.84322648200000005" green="0.84322648200000005" blue="0.84322648200000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="uFF-Bm-Cev"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.73596077039999996" green="0.76859849690000004" blue="0.58075823010000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-ba-B77" customClass="CustomMultipleSelectionComponent" customModule="CustomUIDesign">
+                                <rect key="frame" x="0.0" y="308" width="393" height="218"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="l0O-4R-C72"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.73596077039999996" green="0.76859849690000004" blue="0.58075823010000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uNx-FM-0CO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="MGT-X5-OBd"/>
+                            <constraint firstItem="uNx-FM-0CO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eY7-XQ-dfi"/>
+                            <constraint firstItem="Fhj-ba-B77" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jDW-eV-J8H"/>
+                            <constraint firstItem="uNx-FM-0CO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mkS-3w-dye"/>
+                            <constraint firstItem="Fhj-ba-B77" firstAttribute="top" secondItem="uNx-FM-0CO" secondAttribute="bottom" constant="5" id="nUF-p4-VnE"/>
+                            <constraint firstItem="Fhj-ba-B77" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zz0-tR-FNS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5eq-6o-RJT"/>
+                    <connections>
+                        <outlet property="firstView" destination="uNx-FM-0CO" id="Vij-i7-MSl"/>
+                        <outlet property="secondView" destination="Fhj-ba-B77" id="5YB-h8-V0w"/>
+                        <outlet property="secondViewHeightConstraint" destination="l0O-4R-C72" id="qoy-Uc-lo7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.58778625954199" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aB8-Kh-3z6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4is-c6-WdJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QrW-dF-b5L">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ib0-MZ-1qr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d38-zV-b7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6.8702290076335872" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
